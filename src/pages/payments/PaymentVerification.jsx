@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { paymentService } from "../../api/services";
+import { API_BASE_URL } from "../../api/axios";
 import PageHeader from "../../components/ui/PageHeader";
 import LoadingSpinner from "../../components/ui/LoadingSpinner";
 import Modal from "../../components/ui/Modal";
@@ -166,7 +167,7 @@ const PaymentVerification = () => {
                           onClick={() => {
                             const token = localStorage.getItem("accessToken");
                             window.open(
-                              `/api/payments/screenshot/${ss.id}?token=${token}`,
+                              `${API_BASE_URL}/payments/screenshot/${ss.id}?token=${token}`,
                               "_blank",
                             );
                           }}

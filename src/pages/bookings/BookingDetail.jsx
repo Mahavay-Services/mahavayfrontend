@@ -5,6 +5,7 @@ import {
   paymentService,
   documentService,
 } from "../../api/services";
+import { API_BASE_URL } from "../../api/axios";
 import { useAuth } from "../../context/AuthContext";
 import PageHeader from "../../components/ui/PageHeader";
 import LoadingSpinner from "../../components/ui/LoadingSpinner";
@@ -646,7 +647,7 @@ const BookingDetail = () => {
                             onClick={() => {
                               const token = localStorage.getItem("accessToken");
                               window.open(
-                                `/api/payments/screenshot/${ss.id}?token=${token}`,
+                                `${API_BASE_URL}/payments/screenshot/${ss.id}?token=${token}`,
                                 "_blank",
                               );
                             }}
