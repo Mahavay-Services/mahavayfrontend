@@ -106,10 +106,7 @@ const Login = () => {
       </form>
 
       <div className="mt-6 p-4 bg-secondary-50 rounded-lg">
-        <p className="text-xs text-secondary-500 text-center">
-          Demo Credentials: <strong>admin@satyacrm.com</strong> /{" "}
-          <strong>Admin@123</strong>
-        </p>
+        <p className="text-xs text-secondary-500 text-center"></p>
       </div>
     </div>
   );
