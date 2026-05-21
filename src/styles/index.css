@@ -203,18 +203,6 @@
     @apply font-semibold text-secondary-800 text-xs;
   }
 
-  .invoice-container .references {
-    @apply grid grid-cols-4 gap-2 px-5 py-3 border-b border-secondary-200;
-  }
-
-  .invoice-container .ref-item label {
-    @apply block text-[8px] text-secondary-500 font-semibold;
-  }
-
-  .invoice-container .ref-item span {
-    @apply text-[9px] text-secondary-800;
-  }
-
   .invoice-container table {
     @apply w-full border-collapse;
   }

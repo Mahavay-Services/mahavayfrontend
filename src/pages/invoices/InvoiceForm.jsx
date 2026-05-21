@@ -22,8 +22,8 @@ const InvoiceForm = () => {
     // Seller details
     seller_name: "Satya Sankalp Services Private Limited",
     seller_address:
-      "1st Floor, 107, Athena Avenue, S.G. Highway, Near Jaguar Showroom, Gota, Ahmedabad",
-    seller_gstin: "24AAHCE4469P1Z1",
+      "306 Heer Aasha Arcade, Opp.sagar-sangeet-1, Sola, Sola, Ahmedabad, Ahmedabad, Gujarat, India, 380060.",
+    seller_gstin: "24ABTCS5773M1ZE",
     seller_state: "Gujarat",
     seller_state_code: "24",
     // Buyer details
@@ -46,9 +46,9 @@ const InvoiceForm = () => {
     terms_of_delivery: "",
     // Bank details
     bank_holder_name: "Satya Sankalp Services Private Limited",
-    bank_name: "IDFC BANK",
-    bank_account_no: "84488844488",
-    bank_branch_ifsc: "JODHPUR ROAD SATELLATE & IDFB0040316",
+    bank_name: "IDFC First Bank",
+    bank_account_no: "81838587898",
+    bank_branch_ifsc: "IDFB0040347",
     bank_swift_code: "",
     notes: "",
   });
@@ -520,95 +520,6 @@ const InvoiceForm = () => {
                     value={form.buyer_phone}
                     onChange={(e) =>
                       handleFormChange("buyer_phone", e.target.value)
-                    }
-                    className="input"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Reference Fields */}
-            <div className="card">
-              <div className="card-header">
-                <h3 className="font-semibold">Reference & Delivery Details</h3>
-              </div>
-              <div className="card-body grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div>
-                  <label className="label">Delivery Note</label>
-                  <input
-                    value={form.delivery_note}
-                    onChange={(e) =>
-                      handleFormChange("delivery_note", e.target.value)
-                    }
-                    className="input"
-                  />
-                </div>
-                <div>
-                  <label className="label">Payment Terms</label>
-                  <input
-                    value={form.payment_terms}
-                    onChange={(e) =>
-                      handleFormChange("payment_terms", e.target.value)
-                    }
-                    className="input"
-                  />
-                </div>
-                <div>
-                  <label className="label">Buyer Order No</label>
-                  <input
-                    value={form.buyer_order_no}
-                    onChange={(e) =>
-                      handleFormChange("buyer_order_no", e.target.value)
-                    }
-                    className="input"
-                  />
-                </div>
-                <div>
-                  <label className="label">Other References</label>
-                  <input
-                    value={form.other_references}
-                    onChange={(e) =>
-                      handleFormChange("other_references", e.target.value)
-                    }
-                    className="input"
-                  />
-                </div>
-                <div>
-                  <label className="label">Dispatch Doc No</label>
-                  <input
-                    value={form.dispatch_doc_no}
-                    onChange={(e) =>
-                      handleFormChange("dispatch_doc_no", e.target.value)
-                    }
-                    className="input"
-                  />
-                </div>
-                <div>
-                  <label className="label">Dispatched Through</label>
-                  <input
-                    value={form.dispatched_through}
-                    onChange={(e) =>
-                      handleFormChange("dispatched_through", e.target.value)
-                    }
-                    className="input"
-                  />
-                </div>
-                <div>
-                  <label className="label">Destination</label>
-                  <input
-                    value={form.destination}
-                    onChange={(e) =>
-                      handleFormChange("destination", e.target.value)
-                    }
-                    className="input"
-                  />
-                </div>
-                <div className="md:col-span-2">
-                  <label className="label">Terms of Delivery</label>
-                  <input
-                    value={form.terms_of_delivery}
-                    onChange={(e) =>
-                      handleFormChange("terms_of_delivery", e.target.value)
                     }
                     className="input"
                   />

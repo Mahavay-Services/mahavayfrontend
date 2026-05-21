@@ -47,7 +47,10 @@ const InvoiceDetail = () => {
     const origin = window.location.origin;
     let html = content.innerHTML;
     html = html.replace(/src="\/logo\.png"/g, `src="${origin}/logo.png"`);
-    html = html.replace(/src="\/authsign\.png"/g, `src="${origin}/authsign.png"`);
+    html = html.replace(
+      /src="\/authsign\.png"/g,
+      `src="${origin}/authsign.png"`,
+    );
     printWindow.document.write(`
       <html>
         <head>
@@ -67,9 +70,6 @@ const InvoiceDetail = () => {
             .info-row h3 { font-size: 9px; text-transform: uppercase; color: #64748b; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 4px; }
             .info-row p { line-height: 1.4; color: #475569; font-size: 10px; }
             .info-row .name { font-weight: 600; color: #1e293b; font-size: 12px; }
-            .references { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; padding: 12px 20px; border-bottom: 1px solid #e2e8f0; }
-            .ref-item label { display: block; font-size: 8px; color: #64748b; font-weight: 600; }
-            .ref-item span { font-size: 9px; color: #1e293b; }
             table { width: 100%; border-collapse: collapse; margin-top: 0; }
             thead th { background: #f1f5f9; padding: 8px 10px; font-size: 9px; text-transform: uppercase; letter-spacing: 0.5px; border: 1px solid #e2e8f0; }
             tbody td { padding: 8px 10px; border: 1px solid #e2e8f0; font-size: 10px; }
@@ -159,7 +159,10 @@ const InvoiceDetail = () => {
               <Edit className="w-4 h-4 mr-2" />
               Edit
             </Link>
-            <button onClick={handleDelete} className="btn-outline text-red-600 hover:text-red-700 hover:bg-red-50">
+            <button
+              onClick={handleDelete}
+              className="btn-outline text-red-600 hover:text-red-700 hover:bg-red-50"
+            >
               <Trash2 className="w-4 h-4 mr-2" />
               Delete
             </button>
@@ -167,14 +170,21 @@ const InvoiceDetail = () => {
         }
       />
 
-      <div ref={printRef} className="invoice-container bg-white rounded-lg shadow-sm">
+      <div
+        ref={printRef}
+        className="invoice-container bg-white rounded-lg shadow-sm"
+      >
         {/* Header */}
         <div className="header">
           <div>
             <img src={LOGO_URL} alt="Logo" />
           </div>
           <div className="header-right">
-            <h2>{invoice.invoice_type === "proforma" ? "Proforma Invoice" : "Tax Invoice"}</h2>
+            <h2>
+              {invoice.invoice_type === "proforma"
+                ? "Proforma Invoice"
+                : "Tax Invoice"}
+            </h2>
             <p>Dated: {formatDate(invoice.invoice_date)}</p>
             <p className="mt-1">Invoice No: {invoice.invoice_number}</p>
           </div>
@@ -187,7 +197,10 @@ const InvoiceDetail = () => {
             <p className="name">{invoice.seller_name}</p>
             <p style={{ whiteSpace: "pre-line" }}>{invoice.seller_address}</p>
             <p>GSTIN/UIN: {invoice.seller_gstin}</p>
-            <p>State Name: {invoice.seller_state}, Code: {invoice.seller_state_code}</p>
+            <p>
+              State Name: {invoice.seller_state}, Code:{" "}
+              {invoice.seller_state_code}
+            </p>
           </div>
           <div className="right">
             <h3>Buyer (Bill to)</h3>
@@ -195,51 +208,10 @@ const InvoiceDetail = () => {
             {invoice.buyer_company && <p>{invoice.buyer_company}</p>}
             <p style={{ whiteSpace: "pre-line" }}>{invoice.buyer_address}</p>
             <p>GSTIN/UIN: {invoice.buyer_gstin}</p>
-            <p>State Name: {invoice.buyer_state}, Code: {invoice.buyer_state_code}</p>
-          </div>
-        </div>
-
-        {/* References */}
-        <div className="references">
-          <div className="ref-item">
-            <label>Delivery Note</label>
-            <span>{invoice.delivery_note || "-"}</span>
-          </div>
-          <div className="ref-item">
-            <label>Mode/Terms of Payment</label>
-            <span>{invoice.payment_terms || "-"}</span>
-          </div>
-          <div className="ref-item">
-            <label>Buyer's Order No</label>
-            <span>{invoice.buyer_order_no || "-"}</span>
-          </div>
-          <div className="ref-item">
-            <label>Other References</label>
-            <span>{invoice.other_references || "-"}</span>
-          </div>
-          <div className="ref-item">
-            <label>Dispatch Doc No</label>
-            <span>{invoice.dispatch_doc_no || "-"}</span>
-          </div>
-          <div className="ref-item">
-            <label>Dated</label>
-            <span>-</span>
-          </div>
-          <div className="ref-item">
-            <label>Dispatched through</label>
-            <span>{invoice.dispatched_through || "-"}</span>
-          </div>
-          <div className="ref-item">
-            <label>Destination</label>
-            <span>{invoice.destination || "-"}</span>
-          </div>
-          <div className="ref-item">
-            <label>Terms of Delivery</label>
-            <span>{invoice.terms_of_delivery || "-"}</span>
-          </div>
-          <div className="ref-item">
-            <label>Delivery Note Date</label>
-            <span>-</span>
+            <p>
+              State Name: {invoice.buyer_state}, Code:{" "}
+              {invoice.buyer_state_code}
+            </p>
           </div>
         </div>
 
@@ -269,8 +241,12 @@ const InvoiceDetail = () => {
               </tr>
             ))}
             <tr>
-              <td colSpan={6} className="text-right font-bold">Total</td>
-              <td className="text-right font-bold">{formatCurrency(invoice.subtotal)}</td>
+              <td colSpan={6} className="text-right font-bold">
+                Total
+              </td>
+              <td className="text-right font-bold">
+                {formatCurrency(invoice.subtotal)}
+              </td>
             </tr>
             <tr>
               <td colSpan={6} className="text-right">
@@ -283,16 +259,31 @@ const InvoiceDetail = () => {
               </td>
             </tr>
             <tr>
-              <td colSpan={6} className="text-right">Tax Amount</td>
-              <td className="text-right">{formatCurrency(invoice.total_tax)}</td>
+              <td colSpan={6} className="text-right">
+                Tax Amount
+              </td>
+              <td className="text-right">
+                {formatCurrency(invoice.total_tax)}
+              </td>
             </tr>
             <tr>
-              <td colSpan={6} className="text-right font-bold text-lg">Amount Chargeable (in words)</td>
-              <td className="text-right font-bold">{invoice.amount_in_words}</td>
+              <td colSpan={6} className="text-right font-bold text-lg">
+                Amount Chargeable (in words)
+              </td>
+              <td className="text-right font-bold">
+                {invoice.amount_in_words}
+              </td>
             </tr>
             <tr>
-              <td colSpan={6} className="text-right font-bold text-lg text-green-700">E. & O.E</td>
-              <td className="text-right font-bold text-lg text-green-700">{formatCurrency(invoice.grand_total)}</td>
+              <td
+                colSpan={6}
+                className="text-right font-bold text-lg text-green-700"
+              >
+                E. & O.E
+              </td>
+              <td className="text-right font-bold text-lg text-green-700">
+                {formatCurrency(invoice.grand_total)}
+              </td>
             </tr>
           </tbody>
         </table>
@@ -318,24 +309,40 @@ const InvoiceDetail = () => {
                   {invoice.items.map((item, idx) => (
                     <tr key={idx}>
                       <td>{item.hsn_sac}</td>
-                      <td className="text-right">{formatCurrency(item.amount)}</td>
+                      <td className="text-right">
+                        {formatCurrency(item.amount)}
+                      </td>
                       <td className="text-center">
-                        {invoice.igst_amount > 0 ? invoice.igst_rate : invoice.cgst_rate * 2}%
+                        {invoice.igst_amount > 0
+                          ? invoice.igst_rate
+                          : invoice.cgst_rate * 2}
+                        %
                       </td>
                       <td className="text-right">
                         {formatCurrency(
-                          (item.amount * (invoice.igst_amount > 0 ? invoice.igst_rate : invoice.cgst_rate * 2)) / 100
+                          (item.amount *
+                            (invoice.igst_amount > 0
+                              ? invoice.igst_rate
+                              : invoice.cgst_rate * 2)) /
+                            100,
                         )}
                       </td>
                     </tr>
                   ))}
                   <tr>
                     <td className="font-bold">Total</td>
-                    <td className="text-right font-bold">{formatCurrency(invoice.subtotal)}</td>
-                    <td className="text-center font-bold">
-                      {invoice.igst_amount > 0 ? invoice.igst_rate : invoice.cgst_rate * 2}%
+                    <td className="text-right font-bold">
+                      {formatCurrency(invoice.subtotal)}
                     </td>
-                    <td className="text-right font-bold">{formatCurrency(invoice.total_tax)}</td>
+                    <td className="text-center font-bold">
+                      {invoice.igst_amount > 0
+                        ? invoice.igst_rate
+                        : invoice.cgst_rate * 2}
+                      %
+                    </td>
+                    <td className="text-right font-bold">
+                      {formatCurrency(invoice.total_tax)}
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -350,7 +357,9 @@ const InvoiceDetail = () => {
           <p>Bank Name: {invoice.bank_name}</p>
           <p>A/c No: {invoice.bank_account_no}</p>
           <p>Branch & IFS Code: {invoice.bank_branch_ifsc}</p>
-          {invoice.bank_swift_code && <p>SWIFT Code: {invoice.bank_swift_code}</p>}
+          {invoice.bank_swift_code && (
+            <p>SWIFT Code: {invoice.bank_swift_code}</p>
+          )}
         </div>
 
         {/* Footer */}
@@ -369,7 +378,12 @@ const InvoiceDetail = () => {
         {/* Notes */}
         {invoice.notes && (
           <div className="p-4 bg-secondary-50">
-            <p className="text-xs text-secondary-600" style={{ whiteSpace: "pre-line" }}>{invoice.notes}</p>
+            <p
+              className="text-xs text-secondary-600"
+              style={{ whiteSpace: "pre-line" }}
+            >
+              {invoice.notes}
+            </p>
           </div>
         )}
       </div>
