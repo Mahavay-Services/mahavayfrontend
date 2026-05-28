@@ -30,6 +30,7 @@ import {
   XCircle,
   AlertCircle,
   Upload,
+  Home,
 } from "lucide-react";
 import {
   STAGE_LABELS,
@@ -335,52 +336,56 @@ const BookingDetail = () => {
                 <h3 className="font-semibold">Client Information</h3>
               </div>
               <div className="card-body grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="flex items-center gap-3">
-                  <User className="w-5 h-5 text-secondary-400" />
+                <div className="flex items-start gap-3">
+                  <User className="w-5 h-5 text-secondary-400 mt-0.5" />
                   <div>
                     <p className="text-xs text-secondary-500">Client Name</p>
                     <p className="font-medium">{booking.client_name}</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Building className="w-5 h-5 text-secondary-400" />
+                <div className="flex items-start gap-3">
+                  <Building className="w-5 h-5 text-secondary-400 mt-0.5" />
                   <div>
                     <p className="text-xs text-secondary-500">Company</p>
                     <p className="font-medium">{booking.company_name || "-"}</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-secondary-400" />
+                <div className="flex items-start gap-3">
+                  <Phone className="w-5 h-5 text-secondary-400 mt-0.5" />
                   <div>
                     <p className="text-xs text-secondary-500">Mobile</p>
                     <p className="font-medium">{booking.mobile}</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-secondary-400" />
+                <div className="flex items-start gap-3">
+                  <Mail className="w-5 h-5 text-secondary-400 mt-0.5" />
                   <div>
                     <p className="text-xs text-secondary-500">Email</p>
                     <p className="font-medium">{booking.email || "-"}</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <MapPin className="w-5 h-5 text-secondary-400" />
+                <div className="flex items-start gap-3 md:col-span-2">
+                  <Home className="w-5 h-5 text-secondary-400 mt-0.5" />
                   <div>
-                    <p className="text-xs text-secondary-500">Location</p>
-                    <p className="font-medium">
-                      {[booking.city, booking.state]
-                        .filter(Boolean)
-                        .join(", ") || "-"}
+                    <p className="text-xs text-secondary-500">Full Address</p>
+                    <p className="font-medium">{booking.address || "-"}</p>
+                    <p className="text-sm text-secondary-600">
+                      {[booking.city, booking.state].filter(Boolean).join(", ")}
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <FileText className="w-5 h-5 text-secondary-400" />
+                <div className="flex items-start gap-3">
+                  <FileText className="w-5 h-5 text-secondary-400 mt-0.5" />
                   <div>
-                    <p className="text-xs text-secondary-500">PAN / GST</p>
-                    <p className="font-medium">
-                      {booking.pan_number || "-"} / {booking.gst_number || "-"}
-                    </p>
+                    <p className="text-xs text-secondary-500">PAN Number</p>
+                    <p className="font-medium">{booking.pan_number || "-"}</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <FileText className="w-5 h-5 text-secondary-400 mt-0.5" />
+                  <div>
+                    <p className="text-xs text-secondary-500">GST Number</p>
+                    <p className="font-medium">{booking.gst_number || "-"}</p>
                   </div>
                 </div>
               </div>
