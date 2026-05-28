@@ -452,11 +452,28 @@ const BookingDetail = () => {
                     </span>
                   </div>
                   <div className="flex justify-between text-green-600">
-                    <span>Received</span>
+                    <span>Received (Verified)</span>
                     <span className="font-semibold">
                       {formatCurrency(booking.received_amount)}
                     </span>
                   </div>
+                  {(() => {
+                    const unverifiedAmount =
+                      booking.payments
+                        ?.filter((p) => p.verification_status === "pending")
+                        ?.reduce(
+                          (sum, p) => sum + parseFloat(p.received_amount || 0),
+                          0,
+                        ) || 0;
+                    return unverifiedAmount > 0 ? (
+                      <div className="flex justify-between text-amber-600">
+                        <span>Received (Unverified)</span>
+                        <span className="font-semibold">
+                          {formatCurrency(unverifiedAmount)}
+                        </span>
+                      </div>
+                    ) : null;
+                  })()}
                   <div className="flex justify-between text-red-600">
                     <span>Pending</span>
                     <span className="font-semibold">

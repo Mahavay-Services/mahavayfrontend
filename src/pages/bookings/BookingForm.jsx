@@ -51,6 +51,7 @@ const BookingForm = () => {
     name: "services",
   });
   const watchedServices = watch("services");
+  const watchedReceivedAmount = watch("received_amount");
 
   const calculateTotals = () => {
     let subtotal = 0;
@@ -534,6 +535,31 @@ const BookingForm = () => {
                       ₹{totals.total.toLocaleString("en-IN")}
                     </span>
                   </div>
+                  {parseFloat(watchedReceivedAmount) > 0 && (
+                    <>
+                      <div className="flex justify-between text-sm pt-2 border-t border-dashed border-secondary-200">
+                        <span className="text-secondary-600">
+                          Initial Payment
+                        </span>
+                        <span className="font-medium text-amber-600">
+                          ₹
+                          {parseFloat(watchedReceivedAmount).toLocaleString(
+                            "en-IN",
+                          )}
+                          <span className="text-xs ml-1">(Pending)</span>
+                        </span>
+                      </div>
+                      <div className="flex justify-between text-sm">
+                        <span className="text-secondary-600">Remaining</span>
+                        <span className="font-medium text-red-600">
+                          ₹
+                          {(
+                            totals.total - parseFloat(watchedReceivedAmount)
+                          ).toLocaleString("en-IN")}
+                        </span>
+                      </div>
+                    </>
+                  )}
                 </div>
 
                 <div className="mt-6 space-y-3">
