@@ -90,8 +90,17 @@ const BookingList = () => {
         search,
         ...filters,
       });
-      console.log("Bookings API response:", response.data);
-      const data = response.data.data || {};
+      console.log("Bookings API response raw:", response.data);
+      let parsedData = response.data;
+      if (typeof response.data === "string") {
+        try {
+          parsedData = JSON.parse(response.data);
+        } catch (parseErr) {
+          console.error("Failed to parse bookings response as JSON:", parseErr);
+          throw new Error("Invalid JSON response from server");
+        }
+      }
+      const data = parsedData.data || {};
       setBookings(data.bookings || []);
       setPagination(data.pagination || null);
 
