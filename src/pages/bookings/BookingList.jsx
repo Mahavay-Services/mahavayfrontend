@@ -90,25 +90,27 @@ const BookingList = () => {
         search,
         ...filters,
       });
-      const data = response.data.data;
-      setBookings(data.bookings);
-      setPagination(data.pagination);
+      console.log("Bookings API response:", response.data);
+      const data = response.data.data || {};
+      setBookings(data.bookings || []);
+      setPagination(data.pagination || null);
 
       // Calculate stats from response or bookings
       if (data.stats) {
         setStats(data.stats);
       } else {
         // Calculate from current page data
-        const totalValue = data.bookings.reduce(
+        const bookingsList = data.bookings || [];
+        const totalValue = bookingsList.reduce(
           (sum, b) => sum + (parseFloat(b.total_amount) || 0),
           0,
         );
-        const collected = data.bookings.reduce(
+        const collected = bookingsList.reduce(
           (sum, b) => sum + (parseFloat(b.received_amount) || 0),
           0,
         );
         setStats({
-          totalBookings: data.pagination?.total || data.bookings.length,
+          totalBookings: data.pagination?.total || bookingsList.length,
           totalValue,
           collected,
           pending: totalValue - collected,
