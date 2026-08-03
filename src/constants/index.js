@@ -171,11 +171,14 @@ export const INDIAN_STATES = [
   "Uttar Pradesh",
   "Uttarakhand",
   "West Bengal",
+  "Andaman and Nicobar Islands",
+  "Chandigarh",
+  "Dadra and Nagar Haveli and Daman and Diu",
   "Delhi",
   "Jammu and Kashmir",
   "Ladakh",
+  "Lakshadweep",
   "Puducherry",
-  "Chandigarh",
 ];
 
 export const STATE_CODES = {
@@ -207,9 +210,12 @@ export const STATE_CODES = {
   "Uttar Pradesh": "09",
   Uttarakhand: "05",
   "West Bengal": "19",
+  "Andaman and Nicobar Islands": "35",
+  Chandigarh: "04",
+  "Dadra and Nagar Haveli and Daman and Diu": "26",
   Delhi: "07",
   "Jammu and Kashmir": "01",
   Ladakh: "38",
+  Lakshadweep: "31",
   Puducherry: "34",
-  Chandigarh: "04",
 };
