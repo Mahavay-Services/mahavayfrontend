@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { reportService } from "../../api/services";
 import PageHeader from "../../components/ui/PageHeader";
 import LoadingSpinner from "../../components/ui/LoadingSpinner";
@@ -201,7 +201,7 @@ const Reports = () => {
                   <h3 className="font-semibold">
                     Daily Collections - {reportData.date}
                   </h3>
-                  <span className="font-bold text-green-600">
+                  <span className="font-bold text-primary-600">
                     {formatCurrency(reportData.total)}
                   </span>
                 </div>
@@ -223,7 +223,7 @@ const Reports = () => {
                             {c.booking?.booking_number}
                           </p>
                         </div>
-                        <span className="font-semibold text-green-600">
+                        <span className="font-semibold text-primary-600">
                           {formatCurrency(c.received_amount)}
                         </span>
                       </div>
@@ -238,7 +238,7 @@ const Reports = () => {
                   <h3 className="font-semibold">
                     Monthly Collections - {reportData.month}/{reportData.year}
                   </h3>
-                  <span className="font-bold text-green-600">
+                  <span className="font-bold text-primary-600">
                     {formatCurrency(reportData.total)}
                   </span>
                 </div>
@@ -407,7 +407,7 @@ const Reports = () => {
                           <td className="p-3">
                             {i === 0 ? (
                               <span className="text-yellow-600 font-bold">
-                                🏆
+                                ðŸ†
                               </span>
                             ) : (
                               i + 1
@@ -439,12 +439,12 @@ const Reports = () => {
                               {bdm.splitBookings}
                             </span>
                           </td>
-                          <td className="p-3 text-center text-green-600 font-medium">
+                          <td className="p-3 text-center text-primary-600 font-medium">
                             {bdm.completedBookings}
                           </td>
                           <td className="p-3 text-center">
                             <span
-                              className={`font-medium ${parseFloat(bdm.conversionRate) >= 50 ? "text-green-600" : "text-orange-500"}`}
+                              className={`font-medium ${parseFloat(bdm.conversionRate) >= 50 ? "text-primary-600" : "text-orange-500"}`}
                             >
                               {bdm.conversionRate}%
                             </span>
@@ -452,7 +452,7 @@ const Reports = () => {
                           <td className="p-3 text-right font-bold">
                             {formatCurrency(bdm.totalRevenue)}
                           </td>
-                          <td className="p-3 text-right text-green-600">
+                          <td className="p-3 text-right text-primary-600">
                             {formatCurrency(bdm.collectedRevenue)}
                           </td>
                           <td className="p-3 text-right text-red-500">
@@ -588,7 +588,7 @@ const Reports = () => {
                         <tr key={i} className="border-b">
                           <td className="p-3 font-medium">{b.bdm_name}</td>
                           <td className="p-3 text-center">{b.total}</td>
-                          <td className="p-3 text-center text-green-600 font-medium">
+                          <td className="p-3 text-center text-primary-600 font-medium">
                             {b.accepted}
                           </td>
                           <td className="p-3 text-center">
@@ -600,7 +600,7 @@ const Reports = () => {
                           <td className="p-3 text-right">
                             {formatCurrency(b.totalValue)}
                           </td>
-                          <td className="p-3 text-right text-green-600 font-medium">
+                          <td className="p-3 text-right text-primary-600 font-medium">
                             {formatCurrency(b.acceptedValue)}
                           </td>
                         </tr>
@@ -636,13 +636,13 @@ const Reports = () => {
                         <tr key={i} className="border-b">
                           <td className="p-3 font-medium">{c.company}</td>
                           <td className="p-3 text-center">{c.total}</td>
-                          <td className="p-3 text-center text-green-600">
+                          <td className="p-3 text-center text-primary-600">
                             {c.accepted}
                           </td>
                           <td className="p-3 text-right">
                             {formatCurrency(c.totalValue)}
                           </td>
-                          <td className="p-3 text-right text-green-600">
+                          <td className="p-3 text-right text-primary-600">
                             {formatCurrency(c.acceptedValue)}
                           </td>
                         </tr>
@@ -733,7 +733,7 @@ const Reports = () => {
                             </div>
                           </div>
                           <div className="text-right">
-                            <p className="font-bold text-green-600">
+                            <p className="font-bold text-primary-600">
                               {formatCurrency(bdm.total_value)}
                             </p>
                             <p className="text-xs text-secondary-500">
@@ -760,11 +760,11 @@ const Reports = () => {
                       </p>
                       <p className="font-bold text-2xl">{reportData.total}</p>
                     </div>
-                    <div className="p-4 bg-green-50 rounded-lg text-center">
+                    <div className="p-4 bg-primary-50 rounded-lg text-center">
                       <p className="text-xs text-secondary-500">
                         Conversion Rate
                       </p>
-                      <p className="font-bold text-2xl text-green-600">
+                      <p className="font-bold text-2xl text-primary-600">
                         {reportData.conversionRate}%
                       </p>
                     </div>
@@ -817,7 +817,7 @@ const Reports = () => {
                             </p>
                           </div>
                         </div>
-                        <p className="font-bold text-green-600">
+                        <p className="font-bold text-primary-600">
                           {formatCurrency(s.total_split)}
                         </p>
                       </div>

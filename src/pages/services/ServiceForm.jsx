@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -187,7 +187,7 @@ const ServiceForm = () => {
           <div className="card-body">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="label">Default Price (₹) *</label>
+                <label className="label">Default Price (â‚¹) *</label>
                 <input
                   type="number"
                   step="0.01"
@@ -220,21 +220,21 @@ const ServiceForm = () => {
                 <div className="flex justify-between">
                   <span className="text-secondary-600">Base Price</span>
                   <span className="font-medium">
-                    ₹{parseFloat(price || 0).toLocaleString("en-IN")}
+                    â‚¹{parseFloat(price || 0).toLocaleString("en-IN")}
                   </span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-secondary-600">GST ({gst}%)</span>
                   <span className="font-medium">
-                    ₹{gstAmount.toLocaleString("en-IN")}
+                    â‚¹{gstAmount.toLocaleString("en-IN")}
                   </span>
                 </div>
                 <div className="flex justify-between pt-2 border-t border-secondary-200">
                   <span className="font-semibold text-secondary-900">
                     Total Amount
                   </span>
-                  <span className="font-bold text-green-600">
-                    ₹{totalAmount.toLocaleString("en-IN")}
+                  <span className="font-bold text-primary-600">
+                    â‚¹{totalAmount.toLocaleString("en-IN")}
                   </span>
                 </div>
               </div>

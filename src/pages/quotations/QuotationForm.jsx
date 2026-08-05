@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { quotationService } from "../../api/services";
 import PageHeader from "../../components/ui/PageHeader";
@@ -419,7 +419,7 @@ const QuotationForm = () => {
                         <SearchableSelect
                           options={services.map((s) => ({
                             value: s.id,
-                            label: `${s.service_name} - ₹${s.default_price}`,
+                            label: `${s.service_name} - â‚¹${s.default_price}`,
                           }))}
                           value={item.service_id}
                           onChange={(val) =>
@@ -465,7 +465,7 @@ const QuotationForm = () => {
                         />
                       </div>
                       <div>
-                        <label className="label">Unit Price (₹)</label>
+                        <label className="label">Unit Price (â‚¹)</label>
                         <input
                           type="number"
                           value={item.unit_price}

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+﻿import { useState, useEffect, useRef } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useForm, useFieldArray } from "react-hook-form";
 import {
@@ -366,7 +366,7 @@ const BookingForm = () => {
                       <SearchableSelect
                         options={services.map((s) => ({
                           value: s.id,
-                          label: `${s.service_name} - ₹${s.default_price}`,
+                          label: `${s.service_name} - â‚¹${s.default_price}`,
                         }))}
                         value={watch(`services.${index}.service_id`) || ""}
                         onChange={(val) => {
@@ -520,19 +520,19 @@ const BookingForm = () => {
                   <div className="flex justify-between text-sm">
                     <span className="text-secondary-600">Subtotal</span>
                     <span className="font-medium">
-                      ₹{totals.subtotal.toLocaleString("en-IN")}
+                      â‚¹{totals.subtotal.toLocaleString("en-IN")}
                     </span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-secondary-600">GST</span>
                     <span className="font-medium">
-                      ₹{totals.gstTotal.toLocaleString("en-IN")}
+                      â‚¹{totals.gstTotal.toLocaleString("en-IN")}
                     </span>
                   </div>
                   <div className="flex justify-between pt-3 border-t border-secondary-200">
                     <span className="font-semibold">Total Amount</span>
-                    <span className="font-bold text-lg text-green-600">
-                      ₹{totals.total.toLocaleString("en-IN")}
+                    <span className="font-bold text-lg text-primary-600">
+                      â‚¹{totals.total.toLocaleString("en-IN")}
                     </span>
                   </div>
                   {parseFloat(watchedReceivedAmount) > 0 && (
@@ -542,7 +542,7 @@ const BookingForm = () => {
                           Initial Payment
                         </span>
                         <span className="font-medium text-amber-600">
-                          ₹
+                          â‚¹
                           {parseFloat(watchedReceivedAmount).toLocaleString(
                             "en-IN",
                           )}
@@ -552,7 +552,7 @@ const BookingForm = () => {
                       <div className="flex justify-between text-sm">
                         <span className="text-secondary-600">Remaining</span>
                         <span className="font-medium text-red-600">
-                          ₹
+                          â‚¹
                           {(
                             totals.total - parseFloat(watchedReceivedAmount)
                           ).toLocaleString("en-IN")}

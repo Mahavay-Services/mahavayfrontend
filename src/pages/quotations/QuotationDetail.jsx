@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+﻿import { useState, useEffect, useRef } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { quotationService } from "../../api/services";
 import LoadingSpinner from "../../components/ui/LoadingSpinner";
@@ -79,17 +79,17 @@ const QuotationDetail = () => {
           <style>
             * { margin: 0; padding: 0; box-sizing: border-box; }
             body { font-family: 'Segoe UI', sans-serif; padding: 40px; color: #1e293b; font-size: 13px; }
-            .q-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 3px solid #16a34a; }
-            .q-header img { height: 52px; }
+            .q-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 3px solid #000080; }
+            .q-header img { height: 72px; }
             .q-header .q-title { text-align: right; }
             .q-header .q-title h2 { font-size: 22px; color: #1e293b; text-transform: uppercase; }
             .q-header .q-title p { color: #64748b; font-size: 12px; margin-top: 2px; }
             .q-info { display: flex; justify-content: space-between; margin-bottom: 28px; }
-            .q-info h3 { font-size: 10px; text-transform: uppercase; color: #16a34a; font-weight: 700; letter-spacing: 1px; margin-bottom: 6px; }
+            .q-info h3 { font-size: 10px; text-transform: uppercase; color: #000080; font-weight: 700; letter-spacing: 1px; margin-bottom: 6px; }
             .q-info p { line-height: 1.6; color: #475569; }
             .q-info .name { font-weight: 600; color: #1e293b; font-size: 14px; }
             table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
-            thead th { background: #16a34a; color: white; padding: 10px 12px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+            thead th { background: #000080; color: white; padding: 10px 12px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
             thead th.text-left { text-align: left; }
             thead th.text-center { text-align: center; }
             thead th.text-right { text-align: right; }
@@ -99,9 +99,9 @@ const QuotationDetail = () => {
             .text-center { text-align: center; }
             .q-totals { margin-left: auto; width: 300px; }
             .q-totals .row { display: flex; justify-content: space-between; padding: 6px 0; }
-            .q-totals .row.grand { border-top: 2px solid #16a34a; padding-top: 10px; margin-top: 6px; font-size: 16px; font-weight: 700; color: #16a34a; }
-            .q-notes { margin-top: 28px; padding: 14px; background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 4px; }
-            .q-notes h4 { font-size: 10px; text-transform: uppercase; color: #16a34a; font-weight: 700; margin-bottom: 6px; letter-spacing: 0.5px; }
+            .q-totals .row.grand { border-top: 2px solid #000080; padding-top: 10px; margin-top: 6px; font-size: 16px; font-weight: 700; color: #000080; }
+            .q-notes { margin-top: 28px; padding: 14px; background: #eff6ff; border-left: 4px solid #000080; border-radius: 4px; }
+            .q-notes h4 { font-size: 10px; text-transform: uppercase; color: #000080; font-weight: 700; margin-bottom: 6px; letter-spacing: 0.5px; }
             .q-notes p { font-size: 12px; color: #475569; white-space: pre-line; line-height: 1.5; }
             .q-terms { margin-top: 14px; padding: 14px; background: #f8fafc; border-radius: 4px; }
             .q-terms h4 { font-size: 10px; text-transform: uppercase; color: #64748b; font-weight: 700; margin-bottom: 6px; }
@@ -246,14 +246,14 @@ const QuotationDetail = () => {
             alignItems: "flex-start",
             marginBottom: "24px",
             paddingBottom: "16px",
-            borderBottom: "3px solid #16a34a",
+            borderBottom: "3px solid #000080",
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             <img
               src={LOGO_URL}
               alt="Mahavay"
-              style={{ height: "82px" }}
+              style={{ height: "102px" }}
             />
           </div>
           <div style={{ textAlign: "right" }}>
@@ -297,7 +297,7 @@ const QuotationDetail = () => {
               style={{
                 fontSize: "10px",
                 textTransform: "uppercase",
-                color: "#16a34a",
+                color: "#000080",
                 fontWeight: "700",
                 letterSpacing: "1px",
                 marginBottom: "6px",
@@ -343,7 +343,7 @@ const QuotationDetail = () => {
               style={{
                 fontSize: "10px",
                 textTransform: "uppercase",
-                color: "#16a34a",
+                color: "#000080",
                 fontWeight: "700",
                 letterSpacing: "1px",
                 marginBottom: "6px",
@@ -379,7 +379,7 @@ const QuotationDetail = () => {
             <tr>
               <th
                 style={{
-                  background: "#16a34a",
+                  background: "#000080",
                   color: "white",
                   padding: "10px 12px",
                   fontSize: "10px",
@@ -391,7 +391,7 @@ const QuotationDetail = () => {
               </th>
               <th
                 style={{
-                  background: "#16a34a",
+                  background: "#000080",
                   color: "white",
                   padding: "10px 12px",
                   fontSize: "10px",
@@ -403,7 +403,7 @@ const QuotationDetail = () => {
               </th>
               <th
                 style={{
-                  background: "#16a34a",
+                  background: "#000080",
                   color: "white",
                   padding: "10px 12px",
                   fontSize: "10px",
@@ -415,7 +415,7 @@ const QuotationDetail = () => {
               </th>
               <th
                 style={{
-                  background: "#16a34a",
+                  background: "#000080",
                   color: "white",
                   padding: "10px 12px",
                   fontSize: "10px",
@@ -427,7 +427,7 @@ const QuotationDetail = () => {
               </th>
               <th
                 style={{
-                  background: "#16a34a",
+                  background: "#000080",
                   color: "white",
                   padding: "10px 12px",
                   fontSize: "10px",
@@ -440,7 +440,7 @@ const QuotationDetail = () => {
               {quotation.include_gst && (
                 <th
                   style={{
-                    background: "#16a34a",
+                    background: "#000080",
                     color: "white",
                     padding: "10px 12px",
                     fontSize: "10px",
@@ -453,7 +453,7 @@ const QuotationDetail = () => {
               )}
               <th
                 style={{
-                  background: "#16a34a",
+                  background: "#000080",
                   color: "white",
                   padding: "10px 12px",
                   fontSize: "10px",
@@ -614,11 +614,11 @@ const QuotationDetail = () => {
               display: "flex",
               justifyContent: "space-between",
               padding: "10px 0",
-              borderTop: "2px solid #16a34a",
+              borderTop: "2px solid #000080",
               marginTop: "6px",
               fontSize: "16px",
               fontWeight: "700",
-              color: "#16a34a",
+              color: "#000080",
             }}
           >
             <span>Grand Total</span>
@@ -633,8 +633,8 @@ const QuotationDetail = () => {
             style={{
               marginTop: "24px",
               padding: "14px",
-              background: "#f0fdf4",
-              borderLeft: "4px solid #16a34a",
+              background: "#eff6ff",
+              borderLeft: "4px solid #000080",
               borderRadius: "4px",
             }}
           >
@@ -642,7 +642,7 @@ const QuotationDetail = () => {
               style={{
                 fontSize: "10px",
                 textTransform: "uppercase",
-                color: "#16a34a",
+                color: "#000080",
                 fontWeight: "700",
                 marginBottom: "6px",
               }}

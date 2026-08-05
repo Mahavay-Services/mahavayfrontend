@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { invoiceService } from "../../api/services";
 import PageHeader from "../../components/ui/PageHeader";
@@ -596,7 +596,7 @@ const InvoiceForm = () => {
                         />
                       </div>
                       <div className="col-span-2">
-                        <label className="label">Rate (₹)</label>
+                        <label className="label">Rate (â‚¹)</label>
                         <input
                           type="number"
                           value={item.rate}

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+﻿import { useState, useEffect, useRef } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import {
   bookingService,
@@ -451,7 +451,7 @@ const BookingDetail = () => {
                       {formatCurrency(booking.total_amount)}
                     </span>
                   </div>
-                  <div className="flex justify-between text-green-600">
+                  <div className="flex justify-between text-primary-600">
                     <span>Received (Verified)</span>
                     <span className="font-semibold">
                       {formatCurrency(booking.received_amount)}
@@ -507,7 +507,7 @@ const BookingDetail = () => {
                   <p className="text-xs text-secondary-500">Services</p>
                 </div>
                 <div className="text-center p-3 bg-secondary-50 rounded-lg">
-                  <p className="text-2xl font-bold text-green-600">
+                  <p className="text-2xl font-bold text-primary-600">
                     {booking.payments?.filter(
                       (p) => p.verification_status === "verified",
                     ).length || 0}
@@ -595,7 +595,7 @@ const BookingDetail = () => {
                       #{idx + 1}
                     </h4>
                     <p className="text-sm text-secondary-500">
-                      {new Date(payment.payment_date).toLocaleDateString()} •{" "}
+                      {new Date(payment.payment_date).toLocaleDateString()} â€¢{" "}
                       {PAYMENT_MODE_LABELS[payment.payment_mode]}
                     </p>
                   </div>
@@ -633,7 +633,7 @@ const BookingDetail = () => {
                 </div>
                 {payment.verification_status === "verified" &&
                   payment.verifier && (
-                    <div className="text-sm text-green-600 bg-green-50 p-2 rounded mb-4">
+                    <div className="text-sm text-primary-600 bg-primary-50 p-2 rounded mb-4">
                       Verified by {payment.verifier.full_name} on{" "}
                       {new Date(payment.verified_at).toLocaleString()}
                     </div>
@@ -724,7 +724,7 @@ const BookingDetail = () => {
                           {DOCUMENT_TYPES.find(
                             (t) => t.value === doc.document_type,
                           )?.label || doc.document_type}{" "}
-                          • Uploaded by {doc.uploader?.full_name} •
+                          â€¢ Uploaded by {doc.uploader?.full_name} â€¢
                           {new Date(doc.created_at).toLocaleDateString()}
                         </p>
                       </div>
@@ -766,7 +766,7 @@ const BookingDetail = () => {
                         {STAGE_LABELS[log.to_stage]}
                       </p>
                       <p className="text-sm text-secondary-500">
-                        {log.changer?.full_name} •{" "}
+                        {log.changer?.full_name} â€¢{" "}
                         {new Date(log.created_at).toLocaleString()}
                       </p>
                       {log.reason && (
@@ -811,7 +811,7 @@ const BookingDetail = () => {
                     <div>
                       <p className="text-sm">{r.remark}</p>
                       <p className="text-xs text-secondary-500 mt-1">
-                        {r.creator?.full_name} •{" "}
+                        {r.creator?.full_name} â€¢{" "}
                         {new Date(r.created_at).toLocaleString()}
                       </p>
                     </div>

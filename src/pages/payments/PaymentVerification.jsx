@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 import { paymentService } from "../../api/services";
 import { API_BASE_URL } from "../../api/axios";
 import PageHeader from "../../components/ui/PageHeader";
@@ -112,7 +112,7 @@ const PaymentVerification = () => {
 
       {payments.length === 0 ? (
         <div className="card p-12 text-center">
-          <CheckCircle className="w-12 h-12 text-green-500 mx-auto mb-4" />
+          <CheckCircle className="w-12 h-12 text-primary-500 mx-auto mb-4" />
           <h3 className="text-lg font-semibold">All caught up!</h3>
           <p className="text-secondary-500">No payments pending verification</p>
         </div>
@@ -130,7 +130,7 @@ const PaymentVerification = () => {
                       {payment.booking?.booking_number}
                     </p>
                   </div>
-                  <span className="text-lg font-bold text-green-600">
+                  <span className="text-lg font-bold text-primary-600">
                     {formatCurrency(payment.received_amount)}
                   </span>
                 </div>

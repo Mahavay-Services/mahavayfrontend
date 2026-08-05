@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -38,7 +38,7 @@ const Login = () => {
         <img
           src="/Mahavaylogo.png"
           alt="Mahavay CRM"
-          className="w-16 h-16 rounded-2xl object-contain mx-auto mb-4"
+          className="w-[84px] h-[84px] rounded-2xl object-contain mx-auto mb-4"
         />
         <h1 className="text-2xl font-bold text-secondary-900">Welcome Back</h1>
         <p className="text-secondary-500 mt-1">Sign in to Mahavay CRM</p>

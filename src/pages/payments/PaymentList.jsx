@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { paymentService } from '../../api/services'
 import PageHeader from '../../components/ui/PageHeader'
 import DataTable from '../../components/ui/DataTable'
@@ -32,7 +32,7 @@ const PaymentList = () => {
   const columns = [
     { header: 'Booking', render: (row) => <Link to={`/bookings/${row.booking_id}`} className="text-primary-600 hover:underline">{row.booking?.booking_number}</Link> },
     { header: 'Client', render: (row) => row.booking?.client_name },
-    { header: 'Amount', render: (row) => <span className="font-semibold text-green-600">{formatCurrency(row.received_amount)}</span> },
+    { header: 'Amount', render: (row) => <span className="font-semibold text-primary-600">{formatCurrency(row.received_amount)}</span> },
     { header: 'Mode', render: (row) => PAYMENT_MODE_LABELS[row.payment_mode] || row.payment_mode },
     { header: 'Date', render: (row) => new Date(row.payment_date).toLocaleDateString() },
     { header: 'Status', render: (row) => <Badge variant={row.verification_status === VERIFICATION_STATUS.VERIFIED ? 'success' : row.verification_status === VERIFICATION_STATUS.REJECTED ? 'danger' : 'warning'}>{row.verification_status}</Badge> },

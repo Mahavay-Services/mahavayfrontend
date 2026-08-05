@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { documentService } from '../../api/services'
 import PageHeader from '../../components/ui/PageHeader'
 import LoadingSpinner from '../../components/ui/LoadingSpinner'
@@ -74,7 +74,7 @@ const LegalApprovals = () => {
       <PageHeader title="Legal Approvals" subtitle={`${bookings.length} bookings pending legal approval`} breadcrumbs={[{ label: 'Dashboard', href: '/dashboard' }, { label: 'Legal Approvals' }]} />
 
       {bookings.length === 0 ? (
-        <div className="card p-12 text-center"><Scale className="w-12 h-12 text-green-500 mx-auto mb-4" /><h3 className="text-lg font-semibold">All caught up!</h3><p className="text-secondary-500">No bookings pending legal approval</p></div>
+        <div className="card p-12 text-center"><Scale className="w-12 h-12 text-primary-500 mx-auto mb-4" /><h3 className="text-lg font-semibold">All caught up!</h3><p className="text-secondary-500">No bookings pending legal approval</p></div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {bookings.map(booking => (

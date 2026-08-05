@@ -1,9 +1,9 @@
-import { TrendingUp, TrendingDown } from 'lucide-react'
+﻿import { TrendingUp, TrendingDown } from 'lucide-react'
 
 const StatCard = ({ title, value, change, changeType, icon: Icon, iconColor = 'primary' }) => {
   const colorClasses = {
     primary: 'bg-primary-100 text-primary-600',
-    success: 'bg-green-100 text-green-600',
+    success: 'bg-primary-100 text-primary-600',
     warning: 'bg-yellow-100 text-yellow-600',
     danger: 'bg-red-100 text-red-600',
     secondary: 'bg-secondary-100 text-secondary-600'
@@ -18,7 +18,7 @@ const StatCard = ({ title, value, change, changeType, icon: Icon, iconColor = 'p
           
           {change !== undefined && (
             <div className={`stat-card-change flex items-center gap-1 ${
-              changeType === 'positive' ? 'text-green-600' : 
+              changeType === 'positive' ? 'text-primary-600' : 
               changeType === 'negative' ? 'text-red-600' : 'text-secondary-500'
             }`}>
               {changeType === 'positive' && <TrendingUp className="w-4 h-4" />}

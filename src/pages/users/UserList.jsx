@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { userService } from "../../api/services";
 import PageHeader from "../../components/ui/PageHeader";
@@ -185,7 +185,7 @@ const UserList = () => {
             {row.is_active ? (
               <UserX className="w-4 h-4 text-red-600" />
             ) : (
-              <UserCheck className="w-4 h-4 text-green-600" />
+              <UserCheck className="w-4 h-4 text-primary-600" />
             )}
           </button>
           <button

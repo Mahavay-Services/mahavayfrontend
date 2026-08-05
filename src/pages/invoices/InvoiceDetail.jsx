@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+﻿import { useState, useEffect, useRef } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { invoiceService } from "../../api/services";
 import PageHeader from "../../components/ui/PageHeader";
@@ -60,7 +60,7 @@ const InvoiceDetail = () => {
             body { font-family: 'Segoe UI', sans-serif; padding: 20px; color: #1e293b; font-size: 11px; }
             .invoice-container { max-width: 800px; margin: 0 auto; border: 1px solid #e2e8f0; }
             .header { padding: 20px; border-bottom: 2px solid #1e293b; display: flex; justify-content: space-between; align-items: flex-start; }
-            .header img { height: 60px; }
+            .header img { height: 80px; }
             .header-right { text-align: right; }
             .header-right h2 { font-size: 20px; color: #1e293b; font-weight: 700; text-transform: uppercase; }
             .header-right p { color: #64748b; font-size: 10px; margin-top: 2px; }
@@ -78,8 +78,8 @@ const InvoiceDetail = () => {
             .text-center { text-align: center; }
             .totals-section { padding: 12px 20px; border-top: 1px solid #e2e8f0; }
             .totals-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-            .amount-words { background: #f0fdf4; padding: 10px; border-left: 3px solid #16a34a; }
-            .amount-words label { font-size: 8px; color: #16a34a; font-weight: 700; text-transform: uppercase; }
+            .amount-words { background: #eff6ff; padding: 10px; border-left: 3px solid #000080; }
+            .amount-words label { font-size: 8px; color: #000080; font-weight: 700; text-transform: uppercase; }
             .amount-words p { font-size: 10px; color: #1e293b; margin-top: 4px; }
             .tax-table { width: 100%; border-collapse: collapse; }
             .tax-table th { background: #f1f5f9; padding: 6px 8px; font-size: 8px; text-transform: uppercase; border: 1px solid #e2e8f0; }
@@ -277,11 +277,11 @@ const InvoiceDetail = () => {
             <tr>
               <td
                 colSpan={6}
-                className="text-right font-bold text-lg text-green-700"
+                className="text-right font-bold text-lg text-primary-700"
               >
                 E. & O.E
               </td>
-              <td className="text-right font-bold text-lg text-green-700">
+              <td className="text-right font-bold text-lg text-primary-700">
                 {formatCurrency(invoice.grand_total)}
               </td>
             </tr>

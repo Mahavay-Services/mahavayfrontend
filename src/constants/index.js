@@ -1,4 +1,4 @@
-export const ROLES = {
+﻿export const ROLES = {
   SUPER_ADMIN: "super_admin",
   SALES: "sales",
   ACCOUNTS: "accounts",

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { documentService } from "../../api/services";
 import PageHeader from "../../components/ui/PageHeader";
@@ -259,10 +259,10 @@ const LegalModule = () => {
             <>
               <button
                 onClick={() => openActionModal(row, "approve")}
-                className="p-2 hover:bg-green-100 rounded-lg"
+                className="p-2 hover:bg-primary-100 rounded-lg"
                 title="Approve"
               >
-                <CheckCircle className="w-4 h-4 text-green-600" />
+                <CheckCircle className="w-4 h-4 text-primary-600" />
               </button>
               <button
                 onClick={() => openActionModal(row, "corrections")}
@@ -401,7 +401,7 @@ const LegalModule = () => {
               </div>
               <div className="flex justify-between">
                 <span className="text-secondary-500">Amount</span>
-                <span className="font-semibold text-green-600">
+                <span className="font-semibold text-primary-600">
                   {formatCurrency(selectedBooking.total_amount)}
                 </span>
               </div>
@@ -536,7 +536,7 @@ const LegalModule = () => {
                     <div
                       className={`absolute -left-2 top-0 w-4 h-4 rounded-full ${
                         approval.status === "verified"
-                          ? "bg-green-500"
+                          ? "bg-primary-500"
                           : approval.status === "rejected"
                             ? "bg-red-500"
                             : "bg-yellow-500"

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 import { useAuth } from "../../context/AuthContext";
 import { settingService } from "../../api/services";
 import PageHeader from "../../components/ui/PageHeader";
@@ -253,7 +253,7 @@ const Settings = () => {
                         <img
                           src={settings.quotation_logo_url}
                           alt="Logo preview"
-                          className="h-12"
+                          className="h-[68px]"
                           onError={(e) => (e.target.style.display = "none")}
                         />
                       </div>
@@ -329,7 +329,7 @@ const Settings = () => {
                     <div className="flex items-center gap-3">
                       <input
                         type="color"
-                        value={settings.primary_color || "#16a34a"}
+                        value={settings.primary_color || "#000080"}
                         onChange={(e) =>
                           handleChange("primary_color", e.target.value)
                         }
@@ -337,12 +337,12 @@ const Settings = () => {
                       />
                       <input
                         type="text"
-                        value={settings.primary_color || "#16a34a"}
+                        value={settings.primary_color || "#000080"}
                         onChange={(e) =>
                           handleChange("primary_color", e.target.value)
                         }
                         className="input flex-1"
-                        placeholder="#16a34a"
+                        placeholder="#000080"
                       />
                     </div>
                     <p className="text-xs text-secondary-400 mt-1">
@@ -381,7 +381,7 @@ const Settings = () => {
                     <div
                       className="w-20 h-10 rounded-lg flex items-center justify-center text-white text-xs font-medium"
                       style={{
-                        backgroundColor: settings.primary_color || "#16a34a",
+                        backgroundColor: settings.primary_color || "#000080",
                       }}
                     >
                       Primary

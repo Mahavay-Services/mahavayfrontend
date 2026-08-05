@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { bookingService } from "../../api/services";
@@ -148,7 +148,7 @@ const BookingList = () => {
       maximumFractionDigits: 0,
     })
       .format(amount || 0)
-      .replace("₹", "₹");
+      .replace("â‚¹", "â‚¹");
   };
 
   const formatDate = (date) => {
@@ -216,12 +216,12 @@ const BookingList = () => {
               <p className="text-xs font-medium text-secondary-500 uppercase tracking-wider">
                 Collected
               </p>
-              <p className="text-2xl font-bold text-green-600 mt-1">
+              <p className="text-2xl font-bold text-primary-600 mt-1">
                 {formatCurrency(stats.collected)}
               </p>
             </div>
-            <div className="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center">
-              <CheckCircle className="w-6 h-6 text-green-500" />
+            <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center">
+              <CheckCircle className="w-6 h-6 text-primary-500" />
             </div>
           </div>
         </div>
@@ -415,13 +415,13 @@ const BookingList = () => {
                       </span>
                     </td>
                     <td className="px-6 py-4">
-                      <span className="font-semibold text-green-600">
+                      <span className="font-semibold text-primary-600">
                         {formatCurrency(booking.received_amount)}
                       </span>
                     </td>
                     <td className="px-6 py-4">
                       <span
-                        className={`font-semibold ${booking.pending_amount > 0 ? "text-orange-600" : "text-green-600"}`}
+                        className={`font-semibold ${booking.pending_amount > 0 ? "text-orange-600" : "text-primary-600"}`}
                       >
                         {formatCurrency(booking.pending_amount)}
                       </span>

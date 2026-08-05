@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { useAuth } from '../../context/AuthContext'
 import { dashboardService } from '../../api/services'
 import PageHeader from '../../components/ui/PageHeader'
@@ -167,7 +167,7 @@ const SuperAdminDashboard = ({ data, formatCurrency }) => (
                   </div>
                   <span className="text-sm text-secondary-900">{bdm.bdm?.full_name}</span>
                 </div>
-                <span className="font-semibold text-green-600">
+                <span className="font-semibold text-primary-600">
                   {new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(bdm.total_value || 0)}
                 </span>
               </div>
@@ -277,7 +277,7 @@ const AccountsDashboard = ({ data, formatCurrency }) => (
                 <p className="text-sm text-secondary-500">{payment.booking?.booking_number}</p>
               </div>
               <div className="text-right">
-                <p className="font-semibold text-green-600">{formatCurrency(payment.received_amount)}</p>
+                <p className="font-semibold text-primary-600">{formatCurrency(payment.received_amount)}</p>
                 <p className="text-xs text-secondary-500">by {payment.creator?.full_name}</p>
               </div>
             </div>

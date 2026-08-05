@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { serviceService } from "../../api/services";
@@ -90,7 +90,7 @@ const ServiceList = () => {
     {
       header: "Price",
       render: (row) => (
-        <span className="font-semibold text-green-600">
+        <span className="font-semibold text-primary-600">
           {formatCurrency(row.default_price)}
         </span>
       ),
@@ -124,7 +124,7 @@ const ServiceList = () => {
                   className="p-2 hover:bg-secondary-100 rounded-lg"
                 >
                   {row.is_active ? (
-                    <ToggleRight className="w-5 h-5 text-green-600" />
+                    <ToggleRight className="w-5 h-5 text-primary-600" />
                   ) : (
                     <ToggleLeft className="w-5 h-5 text-secondary-400" />
                   )}

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
@@ -167,7 +167,7 @@ const UserProfile = () => {
             <div className="card-body space-y-3 text-sm">
               <div className="flex justify-between">
                 <span className="text-secondary-500">Status</span>
-                <span className={`font-medium ${user?.is_active ? 'text-green-600' : 'text-red-600'}`}>
+                <span className={`font-medium ${user?.is_active ? 'text-primary-600' : 'text-red-600'}`}>
                   {user?.is_active ? 'Active' : 'Inactive'}
                 </span>
               </div>

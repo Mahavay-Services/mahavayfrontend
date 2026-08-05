@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+﻿import { NavLink } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import {
   LayoutDashboard,
@@ -98,7 +98,7 @@ const Sidebar = ({ open, onClose }) => {
         <img
           src="/Mahavaylogo.png"
           alt="Mahavay CRM"
-          className="w-10 h-10 rounded-xl object-contain"
+          className="w-[60px] h-[60px] rounded-xl object-contain"
         />
         <div>
           <h1 className="font-bold text-secondary-900">Mahavay CRM</h1>
