@@ -97,11 +97,11 @@ const Sidebar = ({ open, onClose }) => {
       <div className="flex items-center gap-3 px-6 py-5 border-b border-secondary-200">
         <img
           src="/logo.png"
-          alt="Satya Sankalp"
+          alt="Mahavay CRM"
           className="w-10 h-10 rounded-xl object-contain"
         />
         <div>
-          <h1 className="font-bold text-secondary-900">Satya Sankalp</h1>
+          <h1 className="font-bold text-secondary-900">Mahavay CRM</h1>
           <p className="text-xs text-secondary-500">CRM</p>
         </div>
       </div>

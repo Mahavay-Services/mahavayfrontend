@@ -37,11 +37,11 @@ const Login = () => {
       <div className="text-center mb-8">
         <img
           src="/logo.png"
-          alt="Satya Sankalp"
+          alt="Mahavay CRM"
           className="w-16 h-16 rounded-2xl object-contain mx-auto mb-4"
         />
         <h1 className="text-2xl font-bold text-secondary-900">Welcome Back</h1>
-        <p className="text-secondary-500 mt-1">Sign in to Satya Sankalp CRM</p>
+        <p className="text-secondary-500 mt-1">Sign in to Mahavay CRM</p>
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
