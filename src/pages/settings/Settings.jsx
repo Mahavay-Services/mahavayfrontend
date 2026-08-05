@@ -159,7 +159,7 @@ const Settings = () => {
                     value={settings.crm_name || ""}
                     onChange={(e) => handleChange("crm_name", e.target.value)}
                     className="input"
-                    placeholder="Satya Sankalp"
+                    placeholder="Mahavay"
                   />
                   <p className="text-xs text-secondary-400 mt-1">
                     This name appears in the sidebar and login page
@@ -243,7 +243,7 @@ const Settings = () => {
                         handleChange("quotation_logo_url", e.target.value)
                       }
                       className="input"
-                      placeholder="/logo.png or https://..."
+                      placeholder="/Mahavaylogo.png or https://..."
                     />
                     <p className="text-xs text-secondary-400 mt-1">
                       Path to logo file (place in public folder or use full URL)

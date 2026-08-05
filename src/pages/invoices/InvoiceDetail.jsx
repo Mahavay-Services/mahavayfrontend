@@ -6,8 +6,8 @@ import LoadingSpinner from "../../components/ui/LoadingSpinner";
 import { ArrowLeft, Printer, Edit, Trash2, Download } from "lucide-react";
 import toast from "react-hot-toast";
 
-const LOGO_URL = "/logo.png";
-const AUTHSIGN_URL = "/authsign.png";
+const LOGO_URL = "/Mahavaylogo.png";
+const AUTHSIGN_URL = "/authsign2.png";
 
 const InvoiceDetail = () => {
   const { id } = useParams();
@@ -46,10 +46,10 @@ const InvoiceDetail = () => {
     const printWindow = window.open("", "_blank");
     const origin = window.location.origin;
     let html = content.innerHTML;
-    html = html.replace(/src="\/logo\.png"/g, `src="${origin}/logo.png"`);
+    html = html.replace(/src="\/Mahavaylogo\.png"/g, `src="${origin}/Mahavaylogo.png"`);
     html = html.replace(
-      /src="\/authsign\.png"/g,
-      `src="${origin}/authsign.png"`,
+      /src="\/authsign2\.png"/g,
+      `src="${origin}/authsign2.png"`,
     );
     printWindow.document.write(`
       <html>

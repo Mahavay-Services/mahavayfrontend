@@ -20,7 +20,7 @@ const InvoiceForm = () => {
     invoice_type: "tax",
     invoice_date: new Date().toISOString().split("T")[0],
     // Seller details
-    seller_name: "Satya Sankalp Services Private Limited",
+    seller_name: "MAHAVAY SERVICES PRIVATE LIMITED",
     seller_address:
       "306 Heer Aasha Arcade, Opp.sagar-sangeet-1, Sola, Sola, Ahmedabad, Ahmedabad, Gujarat, India, 380060.",
     seller_gstin: "24ABTCS5773M1ZE",
@@ -45,7 +45,7 @@ const InvoiceForm = () => {
     destination: "",
     terms_of_delivery: "",
     // Bank details
-    bank_holder_name: "Satya Sankalp Services Private Limited",
+    bank_holder_name: "MAHAVAY SERVICES PRIVATE LIMITED",
     bank_name: "IDFC First Bank",
     bank_account_no: "81838587898",
     bank_branch_ifsc: "IDFB0040347",

@@ -96,7 +96,7 @@ const Sidebar = ({ open, onClose }) => {
     <>
       <div className="flex items-center gap-3 px-6 py-5 border-b border-secondary-200">
         <img
-          src="/logo.png"
+          src="/Mahavaylogo.png"
           alt="Mahavay CRM"
           className="w-10 h-10 rounded-xl object-contain"
         />

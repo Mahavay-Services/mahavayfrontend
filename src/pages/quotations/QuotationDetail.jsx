@@ -13,8 +13,8 @@ import {
 } from "lucide-react";
 import toast from "react-hot-toast";
 
-const LOGO_URL = "/logo.png";
-const AUTH_SIGN_URL = "/authsign.png";
+const LOGO_URL = "/Mahavaylogo.png";
+const AUTH_SIGN_URL = "/authsign2.png";
 
 const statusVariant = {
   draft: "secondary",
@@ -67,10 +67,10 @@ const QuotationDetail = () => {
     const printWindow = window.open("", "_blank");
     const origin = window.location.origin;
     let html = content.innerHTML;
-    html = html.replace(/src="\/logo\.png"/g, `src="${origin}/logo.png"`);
+    html = html.replace(/src="\/Mahavaylogo\.png"/g, `src="${origin}/Mahavaylogo.png"`);
     html = html.replace(
-      /src="\/authsign\.png"/g,
-      `src="${origin}/authsign.png"`,
+      /src="\/authsign2\.png"/g,
+      `src="${origin}/authsign2.png"`,
     );
     printWindow.document.write(`
       <html>
@@ -252,7 +252,7 @@ const QuotationDetail = () => {
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             <img
               src={LOGO_URL}
-              alt="Satya Sankalp"
+              alt="Mahavay"
               style={{ height: "82px" }}
             />
           </div>
@@ -359,7 +359,7 @@ const QuotationDetail = () => {
                 margin: 0,
               }}
             >
-              Satya Sankalp Services Private Limited
+              MAHAVAY SERVICES PRIVATE LIMITED
             </p>
             <p style={{ fontSize: "13px", color: "#475569", margin: 0 }}>
               Created by: {quotation.creator?.full_name || "-"}

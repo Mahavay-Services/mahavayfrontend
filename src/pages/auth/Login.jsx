@@ -36,7 +36,7 @@ const Login = () => {
     <div className="bg-white rounded-2xl shadow-2xl p-8">
       <div className="text-center mb-8">
         <img
-          src="/logo.png"
+          src="/Mahavaylogo.png"
           alt="Mahavay CRM"
           className="w-16 h-16 rounded-2xl object-contain mx-auto mb-4"
         />
