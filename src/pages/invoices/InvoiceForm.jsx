@@ -22,8 +22,8 @@ const InvoiceForm = () => {
     // Seller details
     seller_name: "MAHAVAY SERVICES PRIVATE LIMITED",
     seller_address:
-      "306 Heer Aasha Arcade, Opp.sagar-sangeet-1, Sola, Sola, Ahmedabad, Ahmedabad, Gujarat, India, 380060.",
-    seller_gstin: "24ABTCS5773M1ZE",
+      "4th Floor, Vardan Tower, 4-D, near Lakhudi Road, Vithalbhai Patel Colony, Nathalal Colony, Navrangpura, Ahmedabad, Gujarat 380009",
+    seller_gstin: "24AAVCM1937C1ZF",
     seller_state: "Gujarat",
     seller_state_code: "24",
     // Buyer details
@@ -47,9 +47,9 @@ const InvoiceForm = () => {
     // Bank details
     bank_holder_name: "MAHAVAY SERVICES PRIVATE LIMITED",
     bank_name: "IDFC First Bank",
-    bank_account_no: "81838587898",
-    bank_branch_ifsc: "IDFB0040347",
-    bank_swift_code: "",
+    bank_account_no: "51307202615",
+    bank_branch_ifsc: "IDFB0040308",
+    bank_swift_code: "IDFBINBBMUM",
     notes: "",
   });
 
