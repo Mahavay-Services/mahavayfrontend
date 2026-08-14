@@ -361,8 +361,17 @@ const QuotationDetail = () => {
             >
               MAHAVAY SERVICES PRIVATE LIMITED
             </p>
-            <p style={{ fontSize: "13px", color: "#475569", margin: 0 }}>
-              Created by: {quotation.creator?.full_name || "-"}
+            <p style={{ fontSize: "12px", color: "#475569", margin: "2px 0 0 0", maxWidth: "300px", marginLeft: "auto" }}>
+              4th Floor, Vardan Tower, 4-D, near Lakhudi Road, Vithalbhai Patel Colony, Nathalal Colony, Navrangpura, Ahmedabad, Gujarat 380009
+            </p>
+            <p style={{ fontSize: "12px", color: "#475569", margin: "2px 0 0 0" }}>
+              Email: info@mahavay.com
+            </p>
+            <p style={{ fontSize: "12px", color: "#475569", margin: "2px 0 0 0" }}>
+              CIN: U70200GJ2026PTC180506
+            </p>
+            <p style={{ fontSize: "12px", color: "#475569", margin: "2px 0 0 0" }}>
+              GSTIN: 24AAVCM1937C1ZF
             </p>
           </div>
         </div>
