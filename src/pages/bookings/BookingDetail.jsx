@@ -54,6 +54,7 @@ const BookingDetail = () => {
   const navigate = useNavigate();
   const { hasRole, user } = useAuth();
   const isSales = user?.role === "sales";
+  const isOpsMember = user?.role === "ops_member";
   const TABS = ALL_TABS.filter((tab) => !(tab.hideForSales && isSales));
   const [booking, setBooking] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -649,7 +650,7 @@ const BookingDetail = () => {
                     <strong>Remarks:</strong> {payment.remarks}
                   </div>
                 )}
-                {payment.screenshots?.length > 0 && (
+                {payment.screenshots?.length > 0 && !isOpsMember && (
                   <div>
                     <p className="text-sm font-medium mb-2 flex items-center gap-2">
                       <Image className="w-4 h-4" />
